@@ -22,7 +22,7 @@ public class DrawTriangle {
                     upTriangle();
                     break;
                 case 3:
-                    
+                    leftTriangle();
                     break;
                 case 4:
                     
@@ -72,6 +72,32 @@ public class DrawTriangle {
                 System.out.print("+ ");
             }
             System.out.println();
+        }
+    }
+
+    static void leftTriangle() {
+        System.out.print("triangle size : ");
+        int size = sc.nextInt();
+        System.out.println();
+
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j < size; j++) {
+                System.out.print("  ");
+            }
+            for (int j = i; j < size && j >= 0; j--) {
+                System.out.print("+ ");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j < size && j >= 0; j--) {
+                System.out.print("  ");
+            }
+            for (int j = i; j < size; j++) {
+                System.out.print("+ ");
+            }
+            System.out.println();
+            
         }
     }
 }
