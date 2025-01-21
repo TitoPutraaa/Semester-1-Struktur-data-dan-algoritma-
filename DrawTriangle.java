@@ -25,7 +25,7 @@ public class DrawTriangle {
                     leftTriangle();
                     break;
                 case 4:
-                    
+                    rightTriangle();
                     break;
                 case 5:
                     System.out.println("===THANKS===");
@@ -97,7 +97,25 @@ public class DrawTriangle {
                 System.out.print("+ ");
             }
             System.out.println();
-            
+        }
+    }
+    
+    static void rightTriangle() {
+        System.out.print("triangle size : ");
+        int size = sc.nextInt();
+        System.out.println();
+
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j < size && j >= 0 ; j--) {
+                System.out.print("+ ");
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j < size; j++) {
+                System.out.print("+ ");
+            }
+            System.out.println();
         }
     }
 }
