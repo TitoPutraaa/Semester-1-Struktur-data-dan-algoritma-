@@ -9,7 +9,8 @@ public class Rekursif {
             // decrement(5);
             // increment(1,10);
             // System.out.println(faktorial(5));
-            System.out.println(powerOf(5, 2));
+            // System.out.println(powerOf(5, 2));
+            // System.out.println(fibonaci(5));
         }
     
         static void decrement(int n) {
@@ -36,9 +37,16 @@ public class Rekursif {
         }
 
         static int powerOf(int num, int powerOf) {
-            if (powerOf == 0) {
+            if (powerOf == 1) {
                 return 1;
             }
             return num * powerOf(num, powerOf-1);
+        }
+
+        static int fibonaci(int f) {
+            if (f <= 1) {
+                return f;
+            }
+            return (fibonaci(f-1) + fibonaci(f-2));
         }
     }
