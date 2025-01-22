@@ -8,6 +8,7 @@ public class Rekursif {
         public static void main(String[] args) {
             // decrement(5);
             // increment(1,10);
+            System.out.println(faktorial(5));
         }
     
         static void decrement(int n) {
@@ -24,5 +25,12 @@ public class Rekursif {
             }
             System.out.println(start);
             increment(start+1, target);
+        }
+
+        static int faktorial(int n) {
+            if (n == 1) {
+                return 1;
+            }
+            return n * faktorial(n-1);
         }
     }
