@@ -7,6 +7,7 @@ public class Rekursif {
     
         public static void main(String[] args) {
             // decrement(5);
+            // increment(1,10);
         }
     
         static void decrement(int n) {
@@ -15,5 +16,13 @@ public class Rekursif {
             }
             System.out.println(n);
             decrement(--n);
+        }
+
+        static void increment(int start, int target) {
+            if (start == target+1) {
+                return;
+            }
+            System.out.println(start);
+            increment(start+1, target);
         }
     }
