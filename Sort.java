@@ -36,6 +36,7 @@ public class Sort {
     }
 
     static void bubble() {
+        System.out.println("BUBBLE SORT ALGORITHM");
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = 0; j < arr.length-1-i; j++) {
                 if (arr[j] > arr[j+1]) {
@@ -49,6 +50,7 @@ public class Sort {
     }
 
     static void insertion() {
+        System.out.println("INSERTION SORT ALGORITHM");
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
             int j = i-1;
@@ -63,6 +65,7 @@ public class Sort {
     }
 
     static void selection() {
+        System.out.println("SELECTION SORT ALGORITHM");
         for (int i = 0; i < arr.length; i++) {
             int min = i;
             for (int j = i; j < arr.length; j++) {
