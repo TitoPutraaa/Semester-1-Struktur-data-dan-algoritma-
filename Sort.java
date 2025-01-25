@@ -4,7 +4,8 @@ public class Sort {
     static int[] arr = {9,8,7,6,5,4,3,2,1};
     public static void main(String[] args) {
         // bubble();
-        insertion();
+        // insertion();
+        selection();
         System.out.println(Arrays.toString(arr));
     }
 
@@ -30,6 +31,20 @@ public class Sort {
                 j--;
             }
             arr[j+1] = key;
+        }
+    }
+
+    static void selection() {
+        for (int i = 0; i < arr.length; i++) {
+            int min = i;
+            for (int j = i; j < arr.length; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+            int tem = arr[i];
+            arr[i] = arr[min];
+            arr[min] = tem;
         }
     }
 }
