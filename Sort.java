@@ -1,12 +1,38 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Sort {
     static int[] arr = {9,8,7,6,5,4,3,2,1};
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        // bubble();
-        // insertion();
-        selection();
-        System.out.println(Arrays.toString(arr));
+
+        do { 
+        System.out.println("\nCurent arrays is : " + Arrays.toString(arr));
+        System.out.println("SELECT SORT ALGORITHM");
+        System.out.println("1 : Bubble sort");
+        System.out.println("2 : Insertion sort");
+        System.out.println("3 : Selection sort ");
+        System.out.println("4 : EXIT");
+        System.out.print("PICK : ");
+        int pick = sc.nextInt();
+
+            switch (pick) {
+                case 1:
+                    bubble();
+                    break;
+                    case 2:
+                    insertion();
+                    break;
+                    case 3:
+                    selection();
+                        break;
+                    case 4:
+                        return;
+                default:
+                    System.out.println("please pick the right menu ");
+                        break;
+                }
+        } while (true);
     }
 
     static void bubble() {
@@ -19,6 +45,7 @@ public class Sort {
                 }
             }
         }
+        System.out.println(Arrays.toString(arr));
     }
 
     static void insertion() {
@@ -32,6 +59,7 @@ public class Sort {
             }
             arr[j+1] = key;
         }
+        System.out.println(Arrays.toString(arr));
     }
 
     static void selection() {
@@ -46,5 +74,6 @@ public class Sort {
             arr[i] = arr[min];
             arr[min] = tem;
         }
+        System.out.println(Arrays.toString(arr));
     }
 }
