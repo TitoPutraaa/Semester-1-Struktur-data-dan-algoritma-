@@ -35,7 +35,7 @@ public class Queue {
             }
             rear = (rear+1) % capasity;
             queue[rear] = value;
-            // System.out.println("enQueue : " + value + " to index : " + front);
+            System.out.println("enQueue : " + value + " to index : " + rear);
             System.out.println(Arrays.toString(queue));
         }
     }
@@ -44,13 +44,14 @@ public class Queue {
         if (isEmpty()) {
             System.out.println("this queue is empty");
         } else {
-            if ((front+1)%capasity == rear) {
+            System.out.println("deQueue in index : " + front);
+            queue[front] = 0;
+            if (front == rear) {
                 rear = -1;
                 front = -1;
+            } else {
+                front = (front+1) % capasity;
             }
-            front = (front+1) % capasity;
-            queue[front] = 0;
-            // System.out.println("deQueue in index : " + front);
             System.out.println(Arrays.toString(queue));
 
         }
