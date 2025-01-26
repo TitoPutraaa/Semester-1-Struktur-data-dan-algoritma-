@@ -18,7 +18,6 @@ public class Stack {
         pop();
         pop();
         pop();
-        pop();
     }
 
     // checking method 
@@ -32,6 +31,7 @@ public class Stack {
 
     // operator method 
     static void push(int value) {
+        System.out.println("push : " + value);
         if (isFull()) {
             System.out.println("this stack is full");   
         } else {
@@ -44,6 +44,7 @@ public class Stack {
         if (isEmpty()) {
             System.out.println("this stack is empty");
         } else {
+            System.out.println("pop : " + stack[top]);
             stack[top--] = 0;
             System.out.println(Arrays.toString(stack));
         }
